@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        .container sup{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container border border-dark rounded mt-3">
+        <div class="row text-center mt-3">
+            <h1><u>Application for the Post of PROJECT ENGINEER</u></h1>
+        </div>
+
+        <div class="row mt-4 mb-3">
+            <div class="col-3">
+                <label class="form-label" for="PosCode"><b>1. Position Code (select one):<sup>*</sup></b></label>
+            </div>
+            <div class="col-5">
+                <select class="form-select" name="PosCode" >
+                    <option selected>Select</option>
+                    <option value="Option2">Option2</option>
+                    <option value="Option3">Option3</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row mt-4 mb-3">
+            <div class="col-7">
+                <div class="row mt-2 mb-2">
+                    <div class="col-3">
+                        <label class="form-label" for="Name"><b>2. Name:<sup>*</sup></b></label>
+                    </div>
+                    <div class="col-7">
+                        <input class="form-control" type="text" name="Name" autofocus required>
+                    </div>
+                </div>
+
+                <div class="row mt-2 mb-2">
+                    <div class="col-3">
+                        <label class="form-label" for="Fname"><b>3. Father's Name:<sup>*</sup></b></label>
+                    </div>
+                    <div class="col-7">
+                        <input class="form-control" type="text" name="Fname" required>
+                    </div>
+                </div>
+
+                <div class="row mt-2 mb-2">
+                    <div class="col-3">
+                        <label class="form-label" for="dob"><b>4. Date of Birth:<sup>*</sup></b></label>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" type="date" name="dob"  required>
+                    </div>
+                    <div class="col-1">
+                        <label class="form-label" for="age">Age</label>
+                    </div>
+                    <div class="col-2">
+                        <input class="form-control" type="number" name="age" min="21" size="3"> 
+                    </div>
+                </div>
+
+                <div class="row mt-2 mb-2">
+                    <div class="col-3">
+                        <label class="form-label" for="Gender"><b>5. Gender:<sup>*</sup></b></label>
+                    </div>
+                    <div class="col-7">
+                        <select class="form-select" name="Gender" >
+                            <option selected>Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mt-2 mb-2">
+                    <div class="col-3">
+                        <label class="form-label" for="Nationality"><b>6. Nationality:<sup>*</sup></b></label>
+                    </div>
+                    <div class="col-7">
+                        <input class="form-control" type="text" name="Nationality" required>
+                    </div>
+                </div>
+
+                <div class="row mt-2 mb-2">
+                    <div class="col-3">
+                        <label class="form-label" for="Mstatus"><b>7. Marital Status:<sup>*</sup></b></label>
+                    </div>
+                    <div class="col-7">
+                        <select class="form-select" name="Mstatus" >
+                            <option selected>Select</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mt-2 mb-2">
+                    <div class="col-3">
+                        <label class="form-label" for="category"><b>8. Whether belongs to (select one):<sup>*</sup></b></label>
+                    </div>
+                    <div class="col-7">
+                        <input class="form-check-input" type="radio" name="category">SC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="form-check-input" type="radio" name="category">ST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="form-check-input" type="radio" name="category">OBC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="form-check-input" type="radio" name="category">PWD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="form-check-input" type="radio" name="category">General
+                    </div>
+                </div>                
+            </div>
+            
+            <div class="col-3">
+                <label class="form-label" for="Photo"><b>Upload your Photo<sup>*</sup></b></label><br>
+                <!--<div mt-4 style="border-style: solid; height: 200px; width: 200px; border-color: black;"></div><br>-->
+                <canvas id="myCanvas" width="180%" height="190%"
+                    style="border:1px solid black;">
+                </canvas>
+                <input class="form-control" type="file" name="Photo" required>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="row mt-4 mb-2">
+            <div class="col-2">
+                <label class="form-label" for="idProof"><b>9. Proof of Identity:<sup>*</sup></b></label>
+            </div>
+            <div class="col-5">
+                <select class="form-select" name="idProof" >
+                    <option selected>Aadhar Card</option>
+                    <option value="PAN Card">PAN Card</option>
+                </select>
+            </div>
+            <div class="col-5">
+                <input class="form-control" type="text" name="idNo." placeholder="Write your Aadhar/PAN number">
+            </div>
+        </div>
+
+        <div class="row mt-2 mb-2">
+            <div class="col">
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-label" for="address"><b>10. Address for correspondence:<sup>*</sup></b></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea class="form-control" name="address" cols="30" rows="05" required></textarea>
+                    </div>
+                </div>
+
+                <div class="row mt-2 mb-2">
+                    <div class="col">
+                        <label class="form-label" for="state"><b>Select State:<sup>*</sup></b></label><br>
+                        <select class="form-select" name="state" >
+                            <option value="J&K">Jammu and Kashmir</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="form-label" for="city"><b>Select City/Town:<sup>*</sup></b></label>
+                        <select class="form-select" name="city" >
+                            <option selected></option>
+                            <option value="Gurugram">Gurugram</option>
+                            <option value="Hisar">Hisar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mt-3 mb-2">
+                    <div class="col-4">
+                        <label class="form-label" for="pincode"><b>Pincode:<sup>*</sup></b></label>
+                    </div>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="pincode" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="row mt-3 mb-2">
+                    <b>Phone Numbers (with STD Codes) </b><br>
+                    <div class="col">
+                        <label class="form-label" for="Officeno."><b>Office:</b></label><br>
+                        <input class="form-control" type="text" name="Officeno.">
+                    </div>
+
+                    <div class="col">
+                        <label class="form-label" for="Residenceno."><b>Residence:</b></label><br>
+                        <input class="form-control" type="text" name="Residenceno.">
+                    </div>
+
+                    <div class="col">
+                        <label class="form-label" for="mobile"><b>Mobile:<sup>*</sup></b></label><br>
+                        <input class="form-control" type="text" name="mobile" required>
+                    </div>
+                </div>
+
+                <div class="row"></div>
+                              
+                <div class="row mt-3 mb-2">
+                    <div class="col-3">
+                        <label class="form-label" for="p-email"><b>Primary Email:<sup>*</sup></b></label>
+                    </div>
+                    <div class="col-9">
+                        <input class="form-control" type="text" name="p-email" required>
+                    </div>
+                </div>
+               
+                <div class="row mt-3 mb-2">
+                    <div class="col-3">
+                        <label class="form-label" for="s-email"><b>Secondary Email:</b></label>
+                    </div>
+                    <div class="col-9">
+                        <input class="form-control" type="text" name="s-email" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row mt-2 mb-2">
+            <div class="row mt-3 mb-2">
+                <div class="col-7">
+                    <label class="form-label" for="current job"><b>11. Are you currently working with C-DAC?<sup>*</sup></b></label>
+                </div>
+                <div class="col-5">
+                    <select class="form-select" name="current job" >
+                        <option selected>No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-7">
+                    <label class="form-label" for="employment"><b>12. Are you employed in any Govt./ Semi-Govt./ PSU/Autonomous Bodies?<sup>*</sup></b></label>
+                </div>
+                <div class="col-5">
+                    <select class="form-select" name="employment" >
+                        <option selected>Govrnment</option>
+                        <option value="Semi-Government">Semi-Government</option>
+                        <option value="PSU">PSU</option>
+                        <option value="Autonomous Bodies">Autonomous Bodies</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;If <b>"Yes"</b> the application should be forwarded through proper channel or NOC to be produced at the time of Interview.</p>
+            </div>
+            <div class="row mb-2">
+                <div class="col-7">
+                    <label class="form-label" for="interviewed earlier"><b>13. Have you ever been interviewed for recruitment in anypost in C-DAC earlier?<sup>*</sup></b></label>
+                </div>
+                <div class="col-5">
+                    <select class="form-select" name="interviewed earlier" >
+                        <option selected>No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row mt-4 mb-2">            
+            <p><b> 14. Academic & Professional Qualifications</b> (Begin with latest Graduation/ PG/ PG Diploma (if any)/ PhD)</p>
+            <table class="table table-bordered ml-4 mr-4 ">
+                <thead class="text-center">
+                    <th><label class="form-label" for="Qualification">Qualification<sup>*</sup></label></th>
+                    <th><label class="form-label" for="University">Name of Institute/ <br> Board/University<sup>*</sup></label></th>
+                    <th><label class="form-label" for="Specialization">Specialization<sup>*</sup></label></th>
+                    <th><label class="form-label" for="PassingYear">Year of Passing<sup>*</sup></label></th>
+                    <th><label class="form-label" for="Marks">% Marks (Aggregate)<sup>*</sup></label></th>
+                    <th><label class="form-label" for="Rank">Class/Division/ <br> Rank/Distinction</label></th>
+                    <th><button type="button" class="btn btn-primary">Add row</button></th>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td>
+                            <select name="Qualification" >
+                                <option selected></option>
+                                <option value="Ph.D">Ph.D</option>
+                                <option value="M.Tech">M.Tech</option>
+                                <option value="MCA">MCA</option>
+                                <option value="B.Tech/BE">B.Tech/BE</option>
+                                <option value="BCA">BCA</option>
+                            </select>
+                        </td>
+                        <td ><input class="form-select" type="text" name="University"></td>
+                        <td><input class="form-select" type="text" name="Specialization"></td>
+                        <td><input class="form-select" type="text" name="PassingYear"></td>
+                        <td><input class="form-select" type="text" name="Marks"></td>
+                        <td><input class="form-select" type="text" name="Rank"></td>
+                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><b>15. Work Experience (Latest First)</b></p>  
+            <div class=" scrollmenu">
+                <table class="table table-bordered ml-4 mr-4">
+                <thead class="text-center">
+                    <th><label class="form-label" for="Organization">Name of the Organization </label></th>
+                    <th><label class="form-label" for="Grade">Designation and Grade </label></th>
+                    <th><label class="form-label" for="Salary">Total Salary Drawn</label></th>
+                    <th><label class="form-label" for="start-date">From (Mon-YYYY)</label></th>
+                    <th><label class="form-label" for="end-date">To (Mon-YYYY)</label></th>
+                    <th><label class="form-label" for="Job relevancy">Natureof Work relevant <br> for applied job</label></th>
+                    <th><label class="form-label" for="row">Add rows</label></th>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td><input class="form-control" type="text" name="Organization"></td>
+                    <td><input class="form-control" type="text" name="Grade"></td>
+                    <td><input class="form-control" type="text" name="Salary"></td>
+                    <td>
+                        <select class="form-select" name="start-date" >
+                            <option selected>Select</option>
+                            <option value="1">Jan</option>
+                            <option value="2">Feb</option>
+                            <option value="3">Mar</option>
+                            <option value="4">Apr</option>
+                            <option value="5">May</option>
+                            <option value="6">Jun</option>
+                            <option value="7">Jul</option>
+                            <option value="8">Aug</option>
+                            <option value="9">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
+                        </select>
+                        <span>                        
+                            <input class="form-control" type="text" name="start-date" size="4"> 
+                        </span>
+                    </td>
+                    <td>
+                        <select class="form-select"  name="end-date" >
+                            <option selected>Select</option>
+                            <option value="1">Jan</option>
+                            <option value="2">Feb</option>
+                            <option value="3">Mar</option>
+                            <option value="4">Apr</option>
+                            <option value="5">May</option>
+                            <option value="6">Jun</option>
+                            <option value="7">Jul</option>
+                            <option value="8">Aug</option>
+                            <option value="9">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
+                        </select>
+                        <input class="form-control" type="text" name="end-date" size="4">
+                    </td>
+                    <td><textarea class="form-control" name="job relevancy" cols="10" rows="3"></textarea></td>
+                    <td><button type="button" class="btn btn-primary">Add row</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>          
+            
+        </div>
+        <hr>
+
+        <div class="row mt-4 mb-2">
+            <div class="row">
+                <div class="col">
+                    <label class="form-label" for="short term course"><b>16. Any Short Term Certificate courses/ Training Undergone</b></label>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" name="short term course" cols="30" rows="03" ></textarea>
+                    <p>If so, list the details.</p>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col">
+                    <label class="form-label" for="GATE/UGC"><b>17. GATE/ UGC-CSIR Examination etc. Qualified, if any</b></label>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" name="GATE/UGC" cols="30" rows="05" ></textarea>
+                    <p>(Discipline/ Branch, Year of Passing, %)</p>
+                </div>
+            </div>
+    
+            <div class="row mt-2">
+                <div class="col">
+                    <label class="form-label" for="Project Title"><b>18. a) P.G (M.E/ M. Tech) Project Title</b></label>
+                </div>
+                <div class="col">
+                    <input class="form-control" type="text" name="Project Title">
+                </div>
+            </div>
+    
+            <div class="row mt-2">
+                <div class="col">
+                    <label class="form-label" for="PGProject Synopsis"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b) P.G Project Synopsis/ Abstract (Max. 250 Words)</b></label>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" name="Project Synopsis" cols="30" rows="05" ></textarea>
+                </div>
+            </div>
+    
+            <div class="row mt-2">
+                <div class="col">
+                    <label class="form-label" for="Thesis Title"><b>19. a) Ph.D Thesis Title</b></label>
+                </div>
+                <div class="col">
+                    <input class="form-control" type="text" name="Thesis Title">
+                </div>
+            </div>
+    
+            <div class="row mt-2">
+                <div class="col">
+                    <label class="form-label" for="Thesis Synopsis"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b) Ph.D Thesis Synopsis/ Abstract (Max. 250 Words)</b></label>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" name="Thesis Synopsis" cols="30" rows="05" ></textarea>
+                </div>
+            </div>
+    
+            <div class="row mt-2">
+                <div class="col">
+                    <label class="form-label" for="Work/semi/conf"><b>20. Workshops/ Seminars/ Conferences attended</b></label>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" name="Work/semi/conf" cols="30" rows="05" ></textarea>
+                </div>
+            </div>
+    
+            <div class="row mt-2">
+                <div class="col">
+                    <label class="form-label" for="Papers"><b>21. Papers published/ presented / Technical talks delivered</b>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" name="Papers" cols="30" rows="05" ></textarea>
+                </div>
+            </div>
+    
+            <div class="row mt-2">
+                <div class="col">
+                    <label class="form-label" for="add.info"><b>22. Any additional info that may not have been covered</b></label>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" name="add.info" cols="30" rows="05" ></textarea>
+                </div>
+            </div>
+    
+            <div class="row mt-2">
+                <div class="col">
+                    <label class="form-label" for="Ref"><b>23. References (Name, Occupation, Addr, Email, Mobile#)<sup>*</sup></b></label>
+                </div>
+                <div class="col">
+                    <textarea class="form-control" name="Ref" cols="30" rows="05" ></textarea>
+                    <p>(at least 2 references)</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row mt-4 mb-2 ml-4">
+            <p><b>Application Fees Details</b></p>
+            <div class="col-1"></div>
+
+            <div class="col-6 border border-dark">
+                <div class="row mt-4">
+                    <div class="col text-center">
+                        <label class="form-label" for="Payment Mode"><b><u>Mode of Payment</u></b></label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="text" name="Payment Mode">
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col text-center">
+                        <label class="form-label" for="Bank_Branch"><b><u>Bank and Branch</u></b></label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="text" name="Bank_Branch"><br>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col text-center">
+                        <label class="form-label" for="T_id"><b><u>Transaction ID</u><sup>*</sup></b></label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="text" name="T_id" required><br>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col text-center">
+                        <label class="form-label" for="T_date"><b><u>Transaction Date</u><sup>*</sup></b></label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="date" name="T_date" required><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-1"></div>
+
+            <div class="col-3">
+                <label class="form-label" for="PayProof"><b>Upload proof of Payment<sup>*</sup></b></label><br>
+                <!--<div style="border-style: solid; height: 200px; width: 200px; border-color: black;"></div><br>-->
+                <canvas id="myCanvas" width="180%" height="190%"
+                    style="border:1px solid black;">
+                </canvas>
+                <input class="form-control" type="file" name="PayProof" required>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row mt-4 mb-2 ml-4">
+            <label class="form-label" for="cv"><b>Upload your CV</b> File name: [yourname_CV.pdf]<b><sup>*</sup></b></label>
+            <input class="form-control ml-4" type="file" style="width: 300px;" ><br>
+
+            <p class="mt-4"><b><u>DECLARATION</u><br>
+                1. I certify that all information provided in this application is true, complete and correct to the best of my knowledge and belief.   
+                <br> I understand that any false information or omission of information may disqualify me from consideration for employment 
+                <br> and  <br> may result in dismissal from the job, if discovered at a later date. 
+                <br> 2. I have read and understood the above declaration before signing this.</b>
+            </p>
+
+            <div class="col text-end">
+                <label class="form-label" for="Place">Place<b><sup>*</sup></b></label>
+            </div>
+            <div class="col-2">
+                <input class="form-control" type="text" name="Place" required>
+            </div>
+            <div class="col-6"></div>
+            <div class="col text-end">
+                <label class="form-label" for="Date">Date</label>
+            </div>
+            <div class="col">
+                <input class="form-control" type="datetime-local" name="Date">
+            </div>
+            <div class="col"></div>
+
+            <div class="form-check row mt-3 mb-2 ml-4" style="margin-left: 2%;">
+                <input class="form-check-input" type="checkbox"><b><u>I accept the Terms and Conditions</u></b>
+            </div>
+
+            <div class="row mt-3 mb-2">
+                <div class="col d-grid gap-2 col-2 mx-auto">
+                    <button type="button" class="btn btn-success">SUBMIT FORM</button>
+                </div>
+                <div class="col d-grid gap-2 col-2 mx-auto">
+                    <button type="button" class="btn btn-primary">SAVE DRAFT</button>
+                </div>
+                <div class="col d-grid gap-2 col-2 mx-auto">
+                    <button type="button" class="btn btn-warning ">CLEAR FORM</button>
+                </div>
+                <div class="col d-grid gap-2 col-2 mx-auto">
+                    <button type="button" class="btn btn-danger">BACK</button>
+                </div>
+            </div>
+
+            <div class="row mt-4 mb-2 text-center">
+                <p>&copy; 2020 C-DAC. All rights reserved Website owned & maintained by: Centre for Development of Advanced Computing (C-DAC)</p>
+            </div>
+        </div>
+     
+    </div>
+</body>
+</html>
