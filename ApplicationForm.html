@@ -161,7 +161,6 @@
                             <option value="J&K">Jammu and Kashmir</option>
                             <option value="Delhi">Delhi</option>
                             <option value="Uttar Pradesh">Uttar Pradesh</option>
-                            <option value="Haryana">Haryana</option>
                         </select>
                     </div>
                     <div class="col">
@@ -270,40 +269,42 @@
 
         <div class="row mt-4 mb-2">            
             <p><b> 14. Academic & Professional Qualifications</b> (Begin with latest Graduation/ PG/ PG Diploma (if any)/ PhD)</p>
-            <table class="table table-bordered ml-4 mr-4 ">
-                <thead class="text-center">
-                    <th><label class="form-label" for="Qualification">Qualification<sup>*</sup></label></th>
-                    <th><label class="form-label" for="University">Name of Institute/ <br> Board/University<sup>*</sup></label></th>
-                    <th><label class="form-label" for="Specialization">Specialization<sup>*</sup></label></th>
-                    <th><label class="form-label" for="PassingYear">Year of Passing<sup>*</sup></label></th>
-                    <th><label class="form-label" for="Marks">% Marks (Aggregate)<sup>*</sup></label></th>
-                    <th><label class="form-label" for="Rank">Class/Division/ <br> Rank/Distinction</label></th>
-                    <th><button type="button" class="btn btn-primary">Add row</button></th>
-                </thead>
-                <tbody class="text-center">
-                    <tr>
-                        <td>
-                            <select name="Qualification" >
-                                <option selected></option>
-                                <option value="Ph.D">Ph.D</option>
-                                <option value="M.Tech">M.Tech</option>
-                                <option value="MCA">MCA</option>
-                                <option value="B.Tech/BE">B.Tech/BE</option>
-                                <option value="BCA">BCA</option>
-                            </select>
-                        </td>
-                        <td ><input class="form-select" type="text" name="University"></td>
-                        <td><input class="form-select" type="text" name="Specialization"></td>
-                        <td><input class="form-select" type="text" name="PassingYear"></td>
-                        <td><input class="form-select" type="text" name="Marks"></td>
-                        <td><input class="form-select" type="text" name="Rank"></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="scrollmenu" style="overflow:auto;">
+                <table class="table table-bordered ml-4 mr-4 ">
+                    <thead class="text-center">
+                        <th><label class="form-label" for="Qualification">Qualification<sup>*</sup></label></th>
+                        <th><label class="form-label" for="University">Name of Institute/ <br> Board/University<sup>*</sup></label></th>
+                        <th><label class="form-label" for="Specialization">Specialization<sup>*</sup></label></th>
+                        <th><label class="form-label" for="PassingYear">Year of Passing<sup>*</sup></label></th>
+                        <th><label class="form-label" for="Marks">% Marks (Aggregate)<sup>*</sup></label></th>
+                        <th><label class="form-label" for="Rank">Class/Division/ <br> Rank/Distinction</label></th>
+                        <th><button type="button" class="btn btn-primary">Add row</button></th>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td>
+                                <select class="form-select" name="Qualification" >
+                                    <option selected></option>
+                                    <option value="Ph.D">Ph.D</option>
+                                    <option value="M.Tech">M.Tech</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="B.Tech/BE">B.Tech/BE</option>
+                                    <option value="BCA">BCA</option>
+                                </select>
+                            </td>
+                            <td ><input class="form-control" type="text" name="University"></td>
+                            <td><input class="form-control" type="text" name="Specialization"></td>
+                            <td><input class="form-control" type="text" name="PassingYear"></td>
+                            <td><input class="form-control" type="text" name="Marks"></td>
+                            <td><input class="form-control" type="text" name="Rank"></td>
+                            <td><button type="button" class="btn btn-danger">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <p><b>15. Work Experience (Latest First)</b></p>  
-            <div class=" scrollmenu">
+            <div class=" scrollmenu" style="overflow:auto;">
                 <table class="table table-bordered ml-4 mr-4">
                 <thead class="text-center">
                     <th><label class="form-label" for="Organization">Name of the Organization </label></th>
@@ -320,22 +321,24 @@
                     <td><input class="form-control" type="text" name="Grade"></td>
                     <td><input class="form-control" type="text" name="Salary"></td>
                     <td>
-                        <select class="form-select" name="start-date" >
-                            <option selected>Select</option>
-                            <option value="1">Jan</option>
-                            <option value="2">Feb</option>
-                            <option value="3">Mar</option>
-                            <option value="4">Apr</option>
-                            <option value="5">May</option>
-                            <option value="6">Jun</option>
-                            <option value="7">Jul</option>
-                            <option value="8">Aug</option>
-                            <option value="9">Sep</option>
-                            <option value="10">Oct</option>
-                            <option value="11">Nov</option>
-                            <option value="12">Dec</option>
-                        </select>
-                        <span>                        
+                        <span> 
+                            <select class="form-select" name="start-date" >
+                                <option selected>Select</option>
+                                <option value="1">Jan</option>
+                                <option value="2">Feb</option>
+                                <option value="3">Mar</option>
+                                <option value="4">Apr</option>
+                                <option value="5">May</option>
+                                <option value="6">Jun</option>
+                                <option value="7">Jul</option>
+                                <option value="8">Aug</option>
+                                <option value="9">Sep</option>
+                                <option value="10">Oct</option>
+                                <option value="11">Nov</option>
+                                <option value="12">Dec</option>
+                            </select> 
+                        </span>
+                        <span>         
                             <input class="form-control" type="text" name="start-date" size="4"> 
                         </span>
                     </td>
